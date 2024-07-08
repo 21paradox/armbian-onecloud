@@ -247,6 +247,7 @@ jobs:
         run: |
           # Don't update remote cache
           export GITHUB_ACTIONS=false
+          export CONFIG_USB_DUMMY_HCD=y
           sudo --preserve-env \
             ./compile.sh build \
               ALLOW_ROOT=yes \

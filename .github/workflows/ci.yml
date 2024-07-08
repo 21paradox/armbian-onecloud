@@ -248,7 +248,7 @@ jobs:
           # Don't update remote cache
           export GITHUB_ACTIONS=false
 
-          mkdir userpatches
+          mkdir -p userpatches/kernel
           touch userpatches/kernel/linux-onecloud-current.config
           echo "CONFIG_USB_GADGET=y" >> userpatches/kernel/linux-onecloud-current.config
           echo "CONFIG_USB_DUMMY_HCD=y" >> userpatches/kernel/linux-onecloud-current.config

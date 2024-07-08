@@ -247,7 +247,12 @@ jobs:
         run: |
           # Don't update remote cache
           export GITHUB_ACTIONS=false
-          export CONFIG_USB_DUMMY_HCD=y
+
+          mkdir userpatches
+          touch userpatches/kernel/linux-onecloud-current.config
+          echo "CONFIG_USB_GADGET=y" >> userpatches/kernel/linux-onecloud-current.config
+          echo "CONFIG_USB_DUMMY_HCD=y" >> userpatches/kernel/linux-onecloud-current.config
+
           sudo --preserve-env \
             ./compile.sh build \
               ALLOW_ROOT=yes \

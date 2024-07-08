@@ -250,6 +250,8 @@ jobs:
 
           echo "CONFIG_USB_DUMMY_HCD=y" >> config/kernel/linux-meson-edge.config
           echo "CONFIG_USB_DUMMY_HCD=y" >> config/kernel/linux-meson-current.config
+          echo "CONFIG_USB_CONFIGFS=y" >> config/kernel/linux-meson-edge.config
+          echo "CONFIG_USB_CONFIGFS=y" >> config/kernel/linux-meson-current.config
           echo "prepare onecloud kenrnelconf"
 
           sudo --preserve-env \
